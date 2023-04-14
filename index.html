@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Tetris Game</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="tetris.js"></script>
-</head>
-<body>
-  <canvas id="tetris" width="240" height="400"></canvas>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Tetris</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <script src="tetris.js"></script>
+    <script>
+      const canvas = document.getElementById('canvas');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      const tetris = new Tetris(canvas);
+      tetris.start();
+    </script>
+  </body>
 </html>
