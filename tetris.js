@@ -64,4 +64,5 @@ function createPiece(type) {
     ];
   } else if (type === 'S') {
     return [
+      [0, 6, 6],
      
